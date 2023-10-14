@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+ <style>
+  .main
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    height: 400px;
+  }
+ </style>
+ 
+</head>
+<body>
+  <div class="main">
+    <h1>Total Expense Calculator</h1>
+  <h1 class="displayvalue">0</h1>
+  <input type="text" class="inputvalue" >
+  <button class="btn1" >Add Expense</button>
+</div>
+</body>
+</html>
+
+<script>
+  let counter = 0;
+  const display=document.querySelector(".displayvalue");
+
+                                                                                                        //console.log(typeof(ipval));
+let btn=document.querySelector(".btn1");
+btn.addEventListener("click",runfunction) 
+function runfunction()
+{
+  let ipval=document.querySelector(".inputvalue");
+  let tnum=parseInt(ipval.value,10);//***Converts to the integer
+counter+=tnum
+ display.textContent=counter;
+}
+  </script>
+  
